@@ -5,7 +5,7 @@ import { catchError, retry } from 'rxjs/operators';
 import { Book } from '../models/book';
 
 
-const URL = "http://localhost:9090/book"
+const URL = "https://9090-pavithranaa-gitpodlibba-sud4g8gdkij.ws-us62.gitpod.io/book"
 @Injectable({
   providedIn: 'root'
 })
@@ -94,7 +94,7 @@ getBookByGenre(genre : String): Observable<Book[]>{
 
   //get all books
   getAllBooks() :Observable<Book[]>{
-    return this.http.get<Book[]>(`http://localhost:9090/book`).pipe(retry(0),
+    return this.http.get<Book[]>(`https://9090-pavithranaa-gitpodlibba-sud4g8gdkij.ws-us62.gitpod.io/book`).pipe(retry(0),
     catchError(this.errorHandler)
 );
   }

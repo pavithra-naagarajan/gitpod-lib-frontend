@@ -4,7 +4,7 @@ import { Observable, throwError } from 'rxjs';
 import { catchError, retry } from 'rxjs/operators';
 import { RequestBook } from '../models/request-book';
 
-const URL = "http://localhost:9090/requestbook"
+const URL = "https://9090-pavithranaa-gitpodlibba-sud4g8gdkij.ws-us62.gitpod.io/requestbook"
 @Injectable({
   providedIn: 'root'
 })
@@ -76,7 +76,7 @@ getIssueDetailsByRequestId(requestId:number) :Observable<RequestBook> {
 
   //get all RequestBookDetails
   getAllRequestBookDetails() :Observable<RequestBook[]>{
-    return this.http.get<RequestBook[]>(`http://localhost:9090/requestbook`).pipe(retry(0),
+    return this.http.get<RequestBook[]>(`https://9090-pavithranaa-gitpodlibba-sud4g8gdkij.ws-us62.gitpod.io/requestbook`).pipe(retry(0),
     catchError(this.errorHandler)
 );
   }

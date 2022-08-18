@@ -6,7 +6,7 @@ import { retry, catchError } from 'rxjs/operators';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 
-const URL = "http://localhost:9090/user"
+const URL = "https://9090-pavithranaa-gitpodlibba-sud4g8gdkij.ws-us62.gitpod.io/user"
 @Injectable({
   providedIn: 'root'
 })
@@ -88,7 +88,7 @@ httpOptions = {
 
   //get all users
   getAllUsers() :Observable<User[]>{
-    return this.http.get<User[]>(`http://localhost:9090/user`).pipe(retry(0),
+    return this.http.get<User[]>(`https://9090-pavithranaa-gitpodlibba-sud4g8gdkij.ws-us62.gitpod.io/user`).pipe(retry(0),
     catchError(this.errorHandler)
 );
   }

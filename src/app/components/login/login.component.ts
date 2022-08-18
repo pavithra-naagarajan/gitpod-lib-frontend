@@ -23,16 +23,13 @@ export class LoginComponent implements OnInit {
   async onLogin(credential: any) {
     this.adminService.getAdminById(credential.username).subscribe(response => {
       this.admin = response
-    
+    console.log("response",response)
 
 
     })
     this.userService.getUserByMailId(credential.username).subscribe(data => {
       this.user = data
-  
-
-
-
+      console.log("data",data)
     })
 
     await delay(1000);
@@ -40,8 +37,6 @@ export class LoginComponent implements OnInit {
   }
   check(credential: any) {
     if (credential.username == '1' && credential.password == 'admin1111') {
-
-      
       this.successNotification()
       this.router.navigate(['superadmin']);
     } else if (this.user != null) {

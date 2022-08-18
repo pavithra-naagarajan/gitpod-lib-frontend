@@ -5,7 +5,7 @@ import { catchError, retry } from 'rxjs/operators';
 import { IssueBook } from '../models/issue-book';
 import { User } from '../models/user';
 
-const URL = "http://localhost:9090/issuebook"
+const URL = "https://9090-pavithranaa-gitpodlibba-sud4g8gdkij.ws-us62.gitpod.io/issuebook"
 @Injectable({
   providedIn: 'root'
 })
@@ -92,7 +92,7 @@ httpOptions = {
 
   //get all issuedDetails
   getAllIssuedDetails() :Observable<IssueBook[]>{
-    return this.http.get<IssueBook[]>(`http://localhost:9090/issuebook`).pipe(retry(0),
+    return this.http.get<IssueBook[]>(`https://9090-pavithranaa-gitpodlibba-sud4g8gdkij.ws-us62.gitpod.io/issuebook`).pipe(retry(0),
     catchError(this.errorHandler)
 );
   }

@@ -4,7 +4,7 @@ import { Observable, throwError } from 'rxjs';
 import { catchError, retry } from 'rxjs/operators';
 import { Admin } from '../models/admin';
 
-const URL = "http://localhost:9090/admin"
+const URL = "https://9090-pavithranaa-gitpodlibba-sud4g8gdkij.ws-us62.gitpod.io/admin"
 @Injectable({
   providedIn: 'root'
 })
@@ -70,7 +70,7 @@ getAdminById(adminId : number): Observable<Admin>{
 
   //get all admins
   getAllAdmins() :Observable<Admin[]>{
-    return this.http.get<Admin[]>(`http://localhost:9090/admin`).pipe(retry(0),
+    return this.http.get<Admin[]>(`https://9090-pavithranaa-gitpodlibba-sud4g8gdkij.ws-us62.gitpod.io/admin`).pipe(retry(0),
     catchError(this.errorHandler)
 );
   }
