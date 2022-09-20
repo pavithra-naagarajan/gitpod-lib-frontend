@@ -2,9 +2,18 @@
 # Please adjust to your needs (see https://www.gitpod.io/docs/config-gitpod-file)
 # and commit this file to your remote git repository to share the goodness with others.
 //comment
-checkoutLocation: /workspace
+checkoutLocation: "src/github.com/pavithra-naagarajan/gitpod-lib-frontend"
+workspaceLocation: "."
 tasks:
-  - init: npm install && npm run build
-    command: npm run start
+  - init: >
+      cd /workspace/src/github.com/pavithra-naagarajan/gitpod-lib-frontend &&
+      go get -v ./... &&
+      go build -o app
+    command: >
+      cd /workspace/src/github.com/pavithra-naagarajan/gitpod-lib-frontend &&
+      ./app
+# tasks:
+#   - init: npm install && npm run build
+#     command: npm run start
 
 
