@@ -5,7 +5,7 @@
 additionalRepositories:
   - url: https://github.com/pavithra-naagarajan/gitpod-lib-backend.git
     checkoutLocation: fullstack/backend
-  - url: https://github.com/pavithra-naagarajan/gitpod-lib-backend.git
+  - url: https://github.com/pavithra-naagarajan/gitpod-lib-frontend.git
     checkoutLocation: fullstack/frontend
 
 tasks:
