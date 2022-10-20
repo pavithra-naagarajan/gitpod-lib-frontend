@@ -13,7 +13,8 @@
     "hooks":{
     "pre-commit": "echo \"[Husky] pre-commit\"",
     "post-commit": "echo \"[Husky] post-commit\"",
-    "pre-push": "echo \"[Husky] pre-push\""
+    "pre-push": "echo \"[Husky] pre-push\"",
+    "post-push": "echo \"[Husky] post-push\""
     }
   },
   "dependencies": {
