@@ -25,7 +25,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "prettier --write . && git add -A ."
+      "post-commit": "prettier --write . && git add -A ."
     }
   },
   "devDependencies": {
