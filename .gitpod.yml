@@ -2,33 +2,9 @@
 # Please adjust to your needs (see https://www.gitpod.io/docs/config-gitpod-file)
 # and commit this file to your remote git repository to share the goodness with others.
 # example .gitpod.yml from https://github.com/gitpod-io/demo-multi-repo-frontend
-additionalRepositories:
-  - url: https://github.com/pavithra-naagarajan/gitpod-lib-backend.git
-    checkoutLocation: fullstack/backend
-  - url: https://github.com/pavithra-naagarajan/gitpod-lib-frontend.git
-    checkoutLocation: fullstack/frontend
 
 tasks:
-  - name: backend
-    # change working directory as per configured in `checkoutLocation`
-    # which is configured above as `/workspaces/backend`
-    before: |
-      cd ../backend
-    init: |
-      echo npm install
-    command: |
-      echo npm run dev
-
-    # changing of working directory is not required as these tasks will
-    # by default by executed in `/workspaces/demo-multi-repo-frontend`
-  - name: frontend
-    init: |
-      echo npm install
-      echo npm run build
-    command: |
-      echo npm run dev
-# tasks:
-#   - init: npm install && npm run build
-#     command: npm run start
+   - init: npm install && npm run build
+     command: npm run start
 
 
