@@ -2,7 +2,7 @@
 # Please adjust to your needs (see https://www.gitpod.io/docs/config-gitpod-file)
 # and commit this file to your remote git repository to share the goodness with others.
 # example .gitpod.yml from https://github.com/gitpod-io/demo-multi-repo-frontend
-
+# added
 tasks:
    - init: npm install && npm run build
      command: npm run start
